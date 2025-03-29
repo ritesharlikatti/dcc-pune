@@ -1,0 +1,6 @@
+.aboutus-container {
+    max-height: 90vh; /* Set a max height relative to the viewport */
+    overflow-y: auto; /* Enable scrolling only when needed */
+    margin-top: 40px;
+    /* border: 1px solid #ccc; Optional: Just for visualization */
+  }

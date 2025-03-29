@@ -1,0 +1,64 @@
+
+h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+  }
+  
+  li {
+    margin: 1.5em 0;
+    padding: 0;
+  }
+  
+  b { /* used for event dates/times */
+    margin-right: 3px;
+  }
+  
+  .demo-app {
+    display: flex;
+    min-height: 100%;
+    font-size: 14px;
+    height: 85vh;
+  }
+  
+  .demo-app-sidebar {
+    width: 300px;
+    line-height: 1.5;
+    border-right: 1px solid #d3e2e8;
+  }
+  
+  .demo-app-sidebar-section {
+    padding: 2em;
+  }
+  
+  .demo-app-main {
+    flex-grow: 1;
+    padding: 3em;
+  }
+  
+  .fc { /* the calendar root */
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .eventText-formatter {
+    overflow: hidden;
+    text-wrap: auto;
+  }
+  ::ng-deep.fc-daygrid-dot-event {
+    align-items: flex-start !important;
+    flex-direction: column;
+    color: #3080a4;
+    width: 100%;
+    display: flex
+;
+  }
+  ::ng-deep.fc-col-header-cell-cushion, ::ng-deep.fc-daygrid-day-number {
+    color: #3080a4;
+  }
+  ::ng-deep .fc-button-group {
+    gap: 10px;
+  }

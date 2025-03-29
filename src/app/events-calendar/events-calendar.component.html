@@ -1,0 +1,55 @@
+<div @fadeIn class="mt-5">
+  <div class="container card mt-2 pb-4">
+    <div class="demo-app">
+      <div class="demo-app-sidebar">
+        <div class="demo-app-sidebar-section ps-0">
+          <h4>Weekly Schedule</h4>
+          <ul>
+            <li>Every Sunday at 10.30am - Sunday Church Service</li>
+            <li>Every Wednesday at 7.30pm - HFG at Jagtap Residence</li>
+            <li>Every Saturday at 10.30am - HFG at Rathnam Residence</li>
+          </ul>
+        </div>
+        <!-- <div class="demo-app-sidebar-section ps-0">
+          <label>
+            <input
+              type="checkbox"
+              [checked]="calendarVisible"
+              (change)="handleCalendarToggle()"
+            />
+            toggle whole calendar
+          </label>
+        </div>
+        <div class="demo-app-sidebar-section ps-0">
+          <label>
+            <input
+              type="checkbox"
+              [checked]="calendarOptions.weekends"
+              (change)="handleWeekendsToggle()"
+            />
+            toggle weekends
+          </label>
+        </div> -->
+        <div>
+          <h4>Next Upcoming Event</h4>
+          <p *ngIf="nextEvent">
+            <strong>{{ nextEvent.title }}</strong
+            ><br />
+            📅 {{ nextEvent["eventDate"] | date : "EEEE, MMM d" }}<br />
+            ⏰ {{ nextEvent["startTime"] }} - {{ nextEvent["endTime"] }}
+          </p>
+          <p *ngIf="!nextEvent">No upcoming events found.</p>
+        </div>
+      </div>
+
+      <div class="demo-app-main">
+        <full-calendar *ngIf="calendarVisible" [options]="calendarOptions">
+          <ng-template #eventContent let-arg>
+            <b>{{ arg.timeText }}</b>
+            <i class="eventText-formatter">{{ arg.event.title }}</i>
+          </ng-template>
+        </full-calendar>
+      </div>
+    </div>
+  </div>
+</div>

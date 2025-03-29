@@ -1,0 +1,18 @@
+
+  iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .bg-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-container{
+    max-height: 90vh; /* Set a max height relative to the viewport */
+    margin-top: 150px
+  }

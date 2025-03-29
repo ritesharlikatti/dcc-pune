@@ -1,0 +1,23 @@
+<div @fadeIn class="scrollable-container mt-5">
+  <div
+    *ngFor="let doctrine of doctrines"
+    class="container border-secondary card mt-3 shadow-lg"
+  >
+    <div class="card-body">
+      <h5 class="card-title">{{ doctrine.heading }}</h5>
+      <p class="card-text">
+        {{ doctrine.description }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- <div class="container card mt-3">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </p>
+  </div>
+</div> -->

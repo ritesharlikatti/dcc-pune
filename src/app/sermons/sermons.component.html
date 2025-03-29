@@ -1,0 +1,75 @@
+<div @routeAnimations class="sermons-container">
+  <div class="container d-flex p-0 justify-content-end mt-2">
+    <!-- Preacher Filter -->
+    <div class="col-md-3">
+      <select
+        class="form-select"
+        [(ngModel)]="selectedPreacher"
+        (change)="filterSermons()"
+      >
+        <option value="">All Preachers</option>
+        <option *ngFor="let preacher of preachers" [value]="preacher">
+          {{ preacher }}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-3 mx-3">
+      <select
+        class="form-select"
+        [(ngModel)]="selectedBook"
+        (change)="filterSermons()"
+      >
+        <option value="">All Books</option>
+        <option value="Galatians">Galatians</option>
+        <option value="Peter">Peter</option>
+        <option value="Peter">Colossians</option>
+      </select>
+    </div>
+
+    <div class="">
+      <button class="btn btn-danger" (click)="resetFilters()">
+        Reset Filters
+      </button>
+    </div>
+  </div>
+  <!-- Series Filter -->
+  <!-- <div class="col-md-3">
+      <select class="form-select" [(ngModel)]="selectedSeries" (change)="filterSermons()">
+        <option value="">Select Series</option>
+        <option *ngFor="let s of series" [value]="s">{{ s }}</option>
+      </select>
+    </div>
+
+    Topic Filter 
+    <div class="col-md-3">
+      <select class="form-select" [(ngModel)]="selectedTopic" (change)="filterSermons()">
+        <option value="">Select Topic</option>
+        <option *ngFor="let t of topics" [value]="t">{{ t }}</option>
+      </select>
+    </div>
+
+    Book Filter 
+    
+  </div> -->
+
+  <!-- Reset Filters Button -->
+
+  <div *ngFor="let sermon of filteredSermons" class="container p-0">
+    <div class="card border-secondary mt-4">
+      <div class="card-header">{{ sermon.passage }}</div>
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ sermon.sermonTitle }}
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ sermon.preacher }}</h6>
+        <audio controls class="w-100">
+          <source src="{{ sermon.audioUrl }}" type="audio/mpeg" />
+          Audio not supported
+        </audio>
+      </div>
+      <div class="card-footer text-muted">
+        {{ sermon.sermonDate }}
+      </div>
+    </div>
+  </div>
+</div>

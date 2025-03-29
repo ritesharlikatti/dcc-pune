@@ -1,0 +1,40 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-container p {
+    font-weight: 500;
+    color: var(--bs-gray-600);
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .info-container button {
+    background-color: var(--bs-gray-900);
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  .learn-more-btn:hover {
+    background-color: transparent !important;
+    color: var(--bs-gray-900) !important;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.7rem;
+    margin-bottom: 5rem;
+    padding-inline: 0.3rem;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .section-container {
+    max-width: 1140px !important;
+  }
+  .pastor-greeting {
+    display: flex;
+    flex-direction: row;
+    margin-top: 110px;
+  }
